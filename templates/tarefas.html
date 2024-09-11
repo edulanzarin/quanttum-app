@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quanttum</title>
+  <link rel="icon" href="../static/images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../static/images/icon.png" alt="logo" />
+      <h2>Quanttum</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Menu Principal</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <i class="fas fa-tachometer-alt"></i>Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="analitico.html"><i class="fas fa-chart-line"></i>Analítico</a>
+      </li>
+      <h4>
+        <span>Geral</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href=""><i class="fas fa-tasks"></i>Tarefas</a>
+      </li>
+      <li>
+        <a href="cronograma.html"><i class="fas fa-calendar-alt"></i>Cronograma</a>
+      </li>
+      <li>
+        <a href="segmento.html"><i class="fas fa-users"></i>Segmento</a>
+      </li>
+      <li>
+        <a href="conversas.html"><i class="fas fa-comments"></i>Conversas</a>
+      </li>
+      <li>
+        <a href="notificacoes.html"><i class="fas fa-bell"></i>Notificações</a>
+      </li>
+      <h4>
+        <span>Conta</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="perfil.html"><i class="fas fa-user-circle"></i>Perfil</a>
+      </li>
+      <li>
+        <a href="configuracoes.html"><i class="fas fa-cog"></i>Configurações</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-sign-out-alt"></i>Sair</a>
+      </li>
+    </ul>
+    <div class="user-account">
+      <div class="user-profile">
+        <img id="prof-pic" src="" alt="Profile Image" />
+        <div class="user-detail">
+          <h3 id="nome-sidebar"></h3>
+          <span id="cargo-sidebar"></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+  <div id="content">
+    <div class="container-tarefas">
+      <div class="left-side">
+        <h3>Filtros e Tarefas</h3>
+        <div class="filter-container">
+          <div class="filter-row">
+            <label for="tipo-tarefa">Tipo de Tarefa:</label>
+            <select name="TipoTarefa" id="tipo-tarefa" class="filter-select">
+              <option value="Digitação">Digitação</option>
+              <option value="Fechamento">Fechamento</option>
+              <option value="Conferência">Conferência</option>
+            </select>
+          </div>
+  
+          <div class="filter-row">
+            <div class="date-container">
+              <label for="data-inicio">De:</label>
+              <input type="date" id="data-inicio" name="data-inicio" class="filter-date">
+            </div>
+            <div class="date-container">
+              <label for="data-fim">Até:</label>
+              <input type="date" id="data-fim" name="data-fim" class="filter-date">
+            </div>
+          </div>
+  
+          <div class="filter-row status-filters">
+            <label>
+              <input type="checkbox" name="tudo" id="tudo">
+              Tudo
+            </label>
+            <label>
+              <input type="checkbox" name="aberta" id="aberta">
+              Aberta
+            </label>
+            <label>
+              <input type="checkbox" name="concluida" id="concluida">
+              Concluída
+            </label>
+            <label>
+              <input type="checkbox" name="atrasada" id="atrasada">
+              Atrasada
+            </label>
+          </div>
+        </div>
+  
+        <!-- Lista de tarefas com rolagem -->
+        <div class="task-list">
+          <h3>Lista de Tarefas</h3>
+          <div class="task-item" onclick="mostrarDetalhes('Tarefa 1')">
+            <h4 class="task-title">Tarefa 1</h4>
+            <p class="task-type">Tipo: Digitação</p>
+            <p class="task-date">Data: 15/09/2024</p>
+          </div>
+          <div class="task-item" onclick="mostrarDetalhes('Tarefa 2')">
+            <h4 class="task-title">Tarefa 2</h4>
+            <p class="task-type">Tipo: Fechamento</p>
+            <p class="task-date">Data: 20/09/2024</p>
+          </div>
+          <div class="task-item" onclick="mostrarDetalhes('Tarefa 3')">
+            <h4 class="task-title">Tarefa 3</h4>
+            <p class="task-type">Tipo: Conferência</p>
+            <p class="task-date">Data: 25/09/2024</p>
+          </div>
+          <div class="task-item" onclick="mostrarDetalhes('Tarefa 4')">
+            <h4 class="task-title">Tarefa 4</h4>
+            <p class="task-type">Tipo: Conferência</p>
+            <p class="task-date">Data: 25/09/2024</p>
+          </div>
+          <div class="task-item" onclick="mostrarDetalhes('Tarefa 5')">
+            <h4 class="task-title">Tarefa 5</h4>
+            <p class="task-type">Tipo: Conferência</p>
+            <p class="task-date">Data: 25/09/2024</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="right-side">
+        <h3>Detalhes da Tarefa</h3>
+        <div id="detalhes-tarefa">
+          <!-- Detalhes da tarefa selecionada serão exibidos aqui -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

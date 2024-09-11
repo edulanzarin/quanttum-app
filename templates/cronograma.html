@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quanttum</title>
+  <link rel="icon" href="../static/images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../static/images/icon.png" alt="logo" />
+      <h2>Quanttum</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Menu Principal</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <i class="fas fa-tachometer-alt"></i>Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="analitico.html"><i class="fas fa-chart-line"></i>Analítico</a>
+      </li>
+      <h4>
+        <span>Geral</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="tarefas.html"><i class="fas fa-tasks"></i>Tarefas</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-calendar-alt"></i>Cronograma</a>
+      </li>
+      <li>
+        <a href="segmento.html"><i class="fas fa-users"></i>Segmento</a>
+      </li>
+      <li>
+        <a href="conversas.html"><i class="fas fa-comments"></i>Conversas</a>
+      </li>
+      <li>
+        <a href="notificacoes.html"><i class="fas fa-bell"></i>Notificações</a>
+      </li>
+      <h4>
+        <span>Conta</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="perfil.html"><i class="fas fa-user-circle"></i>Perfil</a>
+      </li>
+      <li>
+        <a href="configuracoes.html"><i class="fas fa-cog"></i>Configurações</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-sign-out-alt"></i>Sair</a>
+      </li>
+    </ul>
+    <div class="user-account">
+      <div class="user-profile">
+        <img id="prof-pic" src="" alt="Profile Image" />
+        <div class="user-detail">
+          <h3 id="nome-sidebar"></h3>
+          <span id="cargo-sidebar"></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="content">
+    <div class="container-cronograma">
+      <div class="calendar">
+        <div class="calendar-header">
+          <button class="prev-month">&lt;</button>
+          <h2 id="current-month">Setembro 2024</h2>
+          <button class="next-month">&gt;</button>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-weekdays">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+          </div>
+          <div class="calendar-grid">
+            <!-- Dias do calendário são gerados dinamicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div id="dayModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Informações do Dia</h3>
+        <div id="modal-body">
+          <!-- Detalhes do dia selecionado -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="../static/js/script-cronograma.js"></script>
+</body>
+</html>

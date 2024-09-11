@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quanttum</title>
+  <link rel="icon" href="../static/images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../static/images/icon.png" alt="logo" />
+      <h2>Quanttum</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Menu Principal</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="index.html">
+          <i class="fas fa-tachometer-alt"></i>Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="analitico.html"><i class="fas fa-chart-line"></i>Analítico</a>
+      </li>
+      <h4>
+        <span>Geral</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="tarefas.html"><i class="fas fa-tasks"></i>Tarefas</a>
+      </li>
+      <li>
+        <a href="cronograma.html"><i class="fas fa-calendar-alt"></i>Cronograma</a>
+      </li>
+      <li>
+        <a href="segmento.html"><i class="fas fa-users"></i>Segmento</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-comments"></i>Conversas</a>
+      </li>
+      <li>
+        <a href="notificacoes.html"><i class="fas fa-bell"></i>Notificações</a>
+      </li>
+      <h4>
+        <span>Conta</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="perfil.html"><i class="fas fa-user-circle"></i>Perfil</a>
+      </li>
+      <li>
+        <a href="configuracoes.html"><i class="fas fa-cog"></i>Configurações</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-sign-out-alt"></i>Sair</a>
+      </li>
+    </ul>
+    <div class="user-account">
+      <div class="user-profile">
+        <img id="prof-pic" src="" alt="Profile Image" />
+        <div class="user-detail">
+          <h3 id="nome-sidebar"></h3>
+          <span id="cargo-sidebar"></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="content">
+    <div class="container-conversas">
+        <div class="left-side">
+          <h3>Conversas</h3>
+
+          <div class="search-contacts">
+            <input id="search-contact" type="text" class="search-contact" placeholder="Pesquisar">
+            <div class="input-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <div class="filtro-conversas">
+            <button id="todas" class="active">Todas</button>
+            <button id="nao-lidas">Não Lidas</button>
+          </div>
+
+          <div class="contacts-list" id="contacts-list">
+            <!-- Contatos carregados dinamicamente -->
+            <div class="contact">
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="conversa-header" id="conversa-header">
+            <img>
+            <div class="info-header" id="info-header">
+              <h3 id="nome-header"></h3>
+              <span id="descricao-header"></span>
+            </div>
+          </div>
+      
+          <div class="mensagens" id="mensagens">
+             <!-- Mensagens serão carregadas dinamicamente -->
+          </div>
+      
+          <!-- Campo de input para enviar mensagens -->
+          <div class="input-container">
+            <button class="file-btn">
+              <i class="fas fa-paperclip"></i>
+            </button>
+            <input type="text" placeholder="Digite sua mensagem..." class="message-input">
+            <button class="send-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script type="module" src="../static/js/script-conversas.js"></script>
+</body>
+</html>
